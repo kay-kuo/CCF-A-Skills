@@ -1,0 +1,45 @@
+name: ccf-rebuttal
+version: 0.1.0
+status: stable-initial
+purpose: "撰写 CCF-A 会议 rebuttal 或期刊 response letter，逐条回应 reviewer concern。"
+trigger: "Use when the user provides reviewer comments, meta-review, decision letter, or asks for rebuttal/response drafting."
+shared_dependencies:
+  - ../_shared/ccf_principles.md
+  - ../_shared/evidence_policy.md
+  - ../_shared/venue_profiles.yaml
+  - ../_shared/output_schemas.md
+axes:
+  response_type:
+    - conference_rebuttal
+    - journal_response_letter
+    - revision_summary
+    - camera_ready_note
+  venue_family:
+    - ml_general
+    - cv
+    - nlp
+    - data_mining_ir_web
+    - systems_security_se_pl
+    - medical_ai_imaging
+    - journal_extension
+  tone:
+    - concise
+    - firm_but_polite
+    - collaborative
+  evidence_status:
+    - all_available
+    - partial
+    - needs_author_input
+required_outputs:
+  - Concern map
+  - Priority response plan
+  - Rebuttal draft
+  - Revision plan
+  - Tone/risk check
+workflow: "parse reviews → cluster concerns → map evidence/actions → draft response → risk/tone QA"
+anti_hallucination:
+  - Do not fabricate citations.
+  - Do not fabricate experimental results.
+  - Do not fabricate dataset sizes or statistics.
+  - Use TODO(author-confirm) for missing information.
+quality_gate: tests/rubric.md

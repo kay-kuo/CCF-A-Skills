@@ -1,0 +1,14 @@
+name: ccf-a-skills
+display_name: CCF-A Skills
+version: 0.1.0
+description: Skill bundle for CCF-A conference and journal paper reading, writing, figures, citations, review, rebuttal, and presentation.
+skills_path: ../../skills
+includes:
+  - ../../skills/_shared
+  - ../../skills/ccf-reader
+  - ../../skills/ccf-writing
+  - ../../skills/ccf-figure-table
+  - ../../skills/ccf-citation
+  - ../../skills/ccf-reviewer
+  - ../../skills/ccf-rebuttal
+  - ../../skills/ccf-presentation

@@ -1,0 +1,21 @@
+name: CCF-A-Skills
+version: 0.1.0
+status: initial-publication-ready
+language: zh-CN primarily, English supported
+license: MIT
+install_unit: full skill directory plus skills/_shared
+skills:
+  - ccf-reader
+  - ccf-writing
+  - ccf-figure-table
+  - ccf-citation
+  - ccf-reviewer
+  - ccf-rebuttal
+  - ccf-presentation
+shared_policy:
+  - evidence_first
+  - claim_evidence_alignment
+  - reviewer_aware
+  - venue_aware
+  - no_fabricated_results_or_citations
+  - reproducibility_by_default

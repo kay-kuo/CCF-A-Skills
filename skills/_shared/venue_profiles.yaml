@@ -1,0 +1,33 @@
+venue_families:
+  ml_general:
+    examples: [NeurIPS, ICML, ICLR, AISTATS, UAI]
+    emphasis: [method_novelty, theoretical_or_empirical_rigor, reproducibility, ablation, limitations]
+    common_reviewer_attacks: [incremental_method, weak_baselines, insufficient_ablation, unclear_assumptions, compute_unfairness]
+  cv:
+    examples: [CVPR, ICCV, ECCV, TPAMI, IJCV]
+    emphasis: [benchmark_strength, visual_evidence, ablation, architecture_clarity, robustness]
+    common_reviewer_attacks: [missing_sota, cherry_picked_visuals, dataset_bias, weak_generalization]
+  nlp:
+    examples: [ACL, EMNLP, NAACL, TACL, CL]
+    emphasis: [task_definition, dataset_quality, linguistic_or_reasoning_analysis, human_eval, error_analysis]
+    common_reviewer_attacks: [data_contamination, weak_human_eval, missing_analysis, overclaiming_reasoning]
+  data_mining_ir_web:
+    examples: [KDD, WWW, SIGIR, WSDM, TKDE]
+    emphasis: [problem_scale, real_world_relevance, strong_baselines, online_or_offline_eval, efficiency]
+    common_reviewer_attacks: [unrealistic_setting, insufficient_scale, missing_user_study, weak_deployment_relevance]
+  systems_security_se_pl:
+    examples: [SOSP, OSDI, SIGCOMM, NSDI, S&P, CCS, USENIX Security, ICSE, PLDI]
+    emphasis: [system_design, threat_model_or_workload, artifact_quality, measurement_validity, reproducibility]
+    common_reviewer_attacks: [unclear_threat_model, weak_workloads, synthetic_only_eval, no_artifact, poor_comparison]
+  medical_ai_imaging:
+    examples: [TMI, MedIA, MICCAI]
+    emphasis: [clinical_relevance, external_validation, data_provenance, safety, interpretability, statistical_reporting]
+    common_reviewer_attacks: [single_center_only, leakage, weak_clinical_baseline, missing_ethics, overclaiming_clinical_impact]
+  journal_extension:
+    examples: [TPAMI, TMI, TKDE, TOIS, TSE, TC, TON]
+    emphasis: [completeness, extended_experiments, detailed_related_work, revision_traceability]
+    common_reviewer_attacks: [conference_version_overlap, insufficient_extension, shallow_analysis]
+output_defaults:
+  language: zh-CN explanation with target-language manuscript text
+  tone: precise, evidence-bound, reviewer-aware
+  uncertainty: explicit TODO flags

@@ -1,0 +1,45 @@
+name: ccf-reviewer
+version: 0.1.0
+status: stable-initial
+purpose: "模拟 CCF-A reviewer，提前发现 novelty、baseline、ablation、reproducibility、writing 等拒稿点。"
+trigger: "Use when the user asks to review a draft, simulate reviewers, estimate risks, or prepare before submission."
+shared_dependencies:
+  - ../_shared/ccf_principles.md
+  - ../_shared/evidence_policy.md
+  - ../_shared/venue_profiles.yaml
+  - ../_shared/output_schemas.md
+axes:
+  review_mode:
+    - fast_triage
+    - full_review
+    - pre_submission_defense
+    - journal_revision_assessment
+  venue_family:
+    - ml_general
+    - cv
+    - nlp
+    - data_mining_ir_web
+    - systems_security_se_pl
+    - medical_ai_imaging
+    - journal_extension
+  reviewer_count:
+    - 3
+    - 4
+    - 5
+  strictness:
+    - realistic
+    - harsh
+    - acceptance_oriented
+required_outputs:
+  - Reviewer reports
+  - Meta-review
+  - Fatal-risk list
+  - Revision action plan
+  - Score rationale
+workflow: "read draft → assign reviewer personas → write reviews → meta-review → action plan"
+anti_hallucination:
+  - Do not fabricate citations.
+  - Do not fabricate experimental results.
+  - Do not fabricate dataset sizes or statistics.
+  - Use TODO(author-confirm) for missing information.
+quality_gate: tests/rubric.md

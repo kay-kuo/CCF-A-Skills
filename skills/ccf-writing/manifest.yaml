@@ -1,0 +1,54 @@
+name: ccf-writing
+version: 0.1.0
+status: stable-initial
+purpose: "撰写和改写 CCF-A 论文的 Introduction、Method、Experiments、Related Work、Limitations，按 venue 风格适配。"
+trigger: "Use when the user asks to draft, rewrite, polish, or structure manuscript sections for CCF-A venues."
+shared_dependencies:
+  - ../_shared/ccf_principles.md
+  - ../_shared/evidence_policy.md
+  - ../_shared/venue_profiles.yaml
+  - ../_shared/output_schemas.md
+axes:
+  section:
+    - title
+    - abstract
+    - introduction
+    - related_work
+    - method
+    - experiments
+    - analysis
+    - limitations
+    - conclusion
+    - appendix
+  venue_family:
+    - ml_general
+    - cv
+    - nlp
+    - data_mining_ir_web
+    - systems_security_se_pl
+    - medical_ai_imaging
+    - journal_extension
+  paper_type:
+    - method
+    - benchmark
+    - dataset
+    - system
+    - theory
+    - application
+    - survey
+  language:
+    - en
+    - zh-to-en
+    - zh-CN planning
+required_outputs:
+  - Section draft
+  - Claim-evidence table
+  - Reviewer-risk notes
+  - TODO(author-confirm) list
+workflow: "identify section intent → build claim skeleton → draft → evidence check → venue-style revision"
+anti_hallucination:
+  - Do not fabricate citations.
+  - Do not fabricate experimental results.
+  - Do not fabricate dataset sizes or statistics.
+  - Use TODO(author-confirm) for missing information.
+quality_gate: tests/rubric.md
