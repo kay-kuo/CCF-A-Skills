@@ -1,6 +1,6 @@
 # CCF-A-Skills
 
-面向 **CCF-A 类会议/期刊** 的科研 Agent Skill Bundle，参考 `nature-skills` 的思想，但将工作流迁移为计算机/AI 顶会顶刊。
+面向 **CCF-A 类会议/期刊** 的科研 Agent Skill Bundle，参考 [`nature-skills`](https://github.com/Yuan1z0825/nature-skills) 的思想，但将工作流迁移为计算机/AI 顶会顶刊。
 
 ## Skill index
 
