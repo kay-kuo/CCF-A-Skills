@@ -6,7 +6,7 @@
 
 | Skill | Purpose | Typical trigger |
 |---|---|---|
-| `ccf-reader` | 精读论文，抽取 `background-problem-challenge-method-novelty-experiment`，并定位 reviewer risk | “精读这篇论文”、“抽取方法贡献和实验设计” |
+| `ccf-reader` | 精读论文，抽取 `background-problem-challenge-method-novelty-experiment` | “精读这篇论文”、“抽取方法贡献和实验设计” |
 | `ccf-writing` | 写 Introduction、Method、Experiments、Related Work、Limitations，并按 venue 风格适配 | “帮我写 NeurIPS introduction”、“改成 TPAMI 风格” |
 | `ccf-figure-table` | 生成方法图、实验表、消融图、case study、error analysis 的设计与文案 | “帮我设计主结果表”、“做方法图结构” |
 | `ccf-citation` | 构建 related work taxonomy、closest-work defense、missing citation risk list | “整理 related work”、“检查有没有漏引” |
@@ -124,14 +124,13 @@ After producing the output, evaluate it against tests/rubric.md and revise once.
 
 ## Scope
 
-本项目主要适配计算机/AI 论文，尤其是：
+本项目主要适配计算机/AI 论文：
 
-- ML/AI: NeurIPS, ICML, ICLR, AAAI, IJCAI
-- CV: CVPR, ICCV, ECCV, TPAMI, IJCV
-- NLP: ACL, EMNLP, NAACL, TACL, CL
-- DM/IR/Web: KDD, WWW, SIGIR, WSDM, TKDE
-- Systems/SE/PL/Security: SOSP, OSDI, SIGCOMM, ICSE, PLDI, S&P, CCS, USENIX Security 等
-- Medical AI / Imaging AI: TMI, MedIA, MICCAI 等，按计算机论文逻辑而非医学临床试验逻辑处理
+- ML/AI: NeurIPS, ICML, ICLR, AAAI, IJCAI, TPAMI
+- CV: CVPR, ICCV, ECCV, IJCV
+- NLP: ACL, EMNLP, NAACL
+- DM/IR/Web: KDD, WWW, SIGIR, TKDE
+- Medical AI / Imaging AI: TMI, MedIA, MICCAI 等
 
 ## License
 
